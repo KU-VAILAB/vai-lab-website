@@ -1,13 +1,13 @@
 ---
 title: "Home"
 layout: homelay
-excerpt: "RT2 Lab at Institut Curie"
+excerpt: "Vision & AI Lab at Korea University"
 sitemap: false
 permalink: /
 ---
 
-### About the Lab
+### Welcome to Vision & AI Lab @ Korea University!
 
-Mauris vitae ultricies leo integer malesuada. Vulputate ut pharetra sit amet aliquam id diam maecenas. Posuere sollicitudin aliquam ultrices sagittis orci a scelerisque purus. Et tortor at risus viverra adipiscing at in. Urna nunc id cursus metus aliquam eleifend. Massa tincidunt dui ut ornare lectus. Rutrum tellus pellentesque eu tincidunt tortor aliquam nulla facilisi cras. Enim diam vulputate ut pharetra sit. Facilisi cras fermentum odio eu feugiat pretium. Commodo elit at imperdiet dui accumsan sit amet nulla. Volutpat maecenas volutpat blandit aliquam etiam erat velit scelerisque. Vivamus at augue eget arcu dictum varius duis. Faucibus pulvinar elementum integer enim neque volutpat. Duis tristique sollicitudin nibh sit amet commodo nulla facilisi.
+The Vision & AI (VAI) Lab advances state-of-the-art artificial intelligence by rethinking the role of data. Our mission is to tackle diverse challenges in areas such as computer vision, multi-modal learning, and generative AI by exploring how data can fuel advances in AI. From a data-centric standpoint, our research interests include data-efficient learning (self-supervised, weakly supervised, semi-supervised, and unsupervised learning), transfer learning, and synthetic data generation. We strive to advance AI systems that can learn effectively from limited or imperfect data, and to develop innovative methods that push the boundaries of what is possible through data-driven approaches.
 
-Cras adipiscing enim eu turpis. Imperdiet massa tincidunt nunc pulvinar sapien et ligula ullamcorper. Sed lectus vestibulum mattis ullamcorper velit. Ut faucibus pulvinar elementum integer. Mattis nunc sed blandit libero volutpat sed cras ornare. Diam volutpat commodo sed egestas egestas fringilla phasellus faucibus. Risus nullam eget felis eget nunc lobortis mattis. In tellus integer feugiat scelerisque varius morbi enim. Eget nunc lobortis mattis aliquam faucibus purus in. Ut pharetra sit amet aliquam id diam maecenas ultricies mi. Augue neque gravida in fermentum et sollicitudin ac orci. Id donec ultrices tincidunt arcu non. Pharetra et ultrices neque ornare aenean euismod. Purus faucibus ornare suspendisse sed. Nibh tellus molestie nunc non blandit massa enim. Non diam phasellus vestibulum lorem sed risus. Vel eros donec ac odio tempor orci dapibus ultrices in. Libero id faucibus nisl tincidunt.
+We are currently looking for undergraduate interns, master’s, and Ph.D. students. We welcome self-motivated students who enjoy identifying and solving problems independently. If you are interested, please contact Jungbeom (jbeomlee@korea.ac.kr) with your CV and transcript. We look forward to collaborating with you in our research journey!

@@ -3,8 +3,9 @@ layout: default
 ---
 
 <div id="homeid" class="col-sm-8 ml-0 nopadding-left">
-	<div id="carousel" class="carousel slide" data-ride="carousel" data-interval="5000" data-pause="hover" >
+	<div id="carousel" class="carousel slide" style="display: none;" data-ride="carousel" data-interval="5000" data-pause="hover" >
 		<!-- Menu -->
+
 		<ol class="carousel-indicators">
 			<li data-target="#carousel" data-slide-to="0" class="active"></li>
 			<li data-target="#carousel" data-slide-to="1"></li>
@@ -24,18 +25,31 @@ layout: default
 			</div>
 		</div>
 		<a class="left carousel-control" href="#carousel" role="button" data-slide="prev">
-		<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-		<span class="sr-only">Previous</span>
+			<span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
+			<span class="sr-only">Previous</span>
 		</a>
 		<a class="right carousel-control" href="#carousel" role="button" data-slide="next">
-		<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-		<span class="sr-only">Next</span>
+			<span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
+			<span class="sr-only">Next</span>
 		</a>
 	</div>
 
 	{{ content }}
+
+	<div id="newsid">
+		<h2>Latest News</h2>
+		<ul class="list-unstyled">
+			{% for article in site.data.news limit:5 %}
+				<li class="media">
+					<div class="media-body">
+					<h4 class="mt-0 mb-1">{{ article.title }}</h4>
+					<p><small>{{ article.date }}</small></p>
+					{{ article.content }}
+					</div>
+				</li>
+			{% endfor %}
+		</ul>
+	</div>
 </div>
 
-<div id="newsid" class="col-sm-4 nopadding-right" >
-	{% include tweets.html %}
-</div>
+

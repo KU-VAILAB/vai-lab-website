@@ -8,6 +8,12 @@ body {
   text-align: justify;
 }
 
+#homeid {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
 figcaption {
   text-align: right;
   margin-top: -20px;
