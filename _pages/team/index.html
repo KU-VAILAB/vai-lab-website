@@ -8,25 +8,45 @@ permalink: /team/
 
 <h1>{{page.title}}</h1>
 
-<!-- Staff -->
+<!-- faculty -->
 
-<h2><a id="staff"></a>Staff</h2>
-{% assign members = site.posts | where: 'category', 'staff' | sort: 'date' %}
+<h2><a id="faculty"></a>Faculty</h2>
+{% assign members = site.posts | where: 'category', 'faculty' | sort: 'date' %}
 {% for member in members %}
-<div class="card team-member-card">
-    <div class="row mt-3">
-        <div class="col-md-2">
+<div class="card" style="margin: 80px 0">
+    <div class="row mt-4" style="display: flex; justify-content: center;">
+        <div class="col-md-4" style="display: flex; justify-content: center;">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
                     class="card-img img-responsive img-thumbnail"
-                    style="filter: grayscale(100%); max-width: 100px;"/>
+                    style="max-width: 200px"/>
             </a>
         </div>
 
-        <div class="col-md-10">
+        <div class="col-md-6">
             <div class="card-body">
-            <h4 class="card-title">{{ member.title }}</h4>
+            <h3 class="card-title">{{ member.title }}</h3>
             <p class="card-text">{{ member.role }}</p>
+            {% if member.education %}
+            <div class="card-text" style="margin-top: 24px">
+                <h4 class="card-title">Education</h4>
+                <ul class="mb-2">
+                {% for edu in member.education %}
+                    <li><small>{{ edu | markdownify | remove: '<p>' | remove: '</p>' }}</small></li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
+            {% if member.experiences %}
+            <div class="card-text" style="margin-top: 24px">
+                <h4 class="card-title">Experiences</h4>
+                <ul>
+                {% for exp in member.experiences %}
+                    <li><small>{{ exp | markdownify | remove: '<p>' | remove: '</p>' }}</small></li>
+                {% endfor %}
+                </ul>
+            </div>
+            {% endif %}
             </div>
         </div>
     </div>
@@ -35,18 +55,81 @@ permalink: /team/
 
 <!-- Students -->
 
-<h2><a id="student"></a>Students</h2>
-{% assign members = site.posts | where: 'category', 'student' | sort: 'date' %}
+<h2><a id="student"></a>Graduate Students</h2>
+{% assign members = site.posts | where: 'category', 'student' | sort: 'role' | reverse %}
+<div style="width: 100%; margin: auto; display: grid; grid-template-columns: 1fr 1fr;">
+    {% for member in members %}
+    <div class="card team-member-card">
+        <div class="mt-3" style="display: flex">
+            <div>
+                <a href={{member.social.website}}>
+                    <img src="{{ member.image }}"
+                        class="card-img img-responsive img-thumbnail"
+                        style="max-width: 150px; object-fit: contain; aspect-ratio: 1/1; object-position: center;"/>
+                </a>
+            </div>
+
+            <div style="width: 100%; padding: 0 20px">
+                <div class="card-body" style="display: flex; flex-direction: column; justify-content: space-evenly; height: 100%;">
+                    <h4 style="margin: 0">{{ member.name }}</h4>
+                    <div style="margin-bottom: 12px">
+                        <p style="margin: 0">{{ member.affiliation }}</p>
+                        <small>{{ member.email }}</small>
+                    </div>
+                    <p style="text-align: left; margin: 0">{{ member.interest }}</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+
+
+
+
+<!-- Interns -->
+
+<h2><a id="intern"></a>Interns</h2>
+{% assign members = site.posts | where: 'category', 'intern' | sort: 'date' %}
 {% for member in members %}
 <div class="card team-member-card">
     <div class="row mt-3">
-        <div class="col-md-2">
+        <!-- <div class="col-md-2">
             <a href={{member.url}}>
                 <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
                     class="card-img img-responsive img-thumbnail"
                     style="filter: grayscale(100%); max-width: 100px;"/>
             </a>
+        </div> -->
+
+        <div class="col-md-10">
+            <div class="card-body">
+                <a href={{member.social.website}}>
+                    <h4 class="card-title">{{ member.title }}</h4>
+                </a>
+                <p class="card-text">{{ member.interest }}</p>
+            </div>
         </div>
+    </div>
+</div>
+
+{% endfor %}
+
+
+<!-- Alumni -->
+
+<h2><a id="alumni"></a>Alumni</h2>
+{% assign members = site.posts | where: 'category', 'alumni' | sort: 'date' %}
+{% for member in members %}
+<div class="card team-member-card">
+    <div class="row mt-3">
+        <!-- <div class="col-md-2">
+            <a href={{member.url}}>
+                <img src="{{ site.url }}{{ site.baseurl }}/images/team/{{ member.image }}"
+                    class="card-img img-responsive img-thumbnail"
+                    style="filter: grayscale(100%); max-width: 100px;"/>
+            </a>
+        </div> -->
 
         <div class="col-md-10">
             <div class="card-body">
